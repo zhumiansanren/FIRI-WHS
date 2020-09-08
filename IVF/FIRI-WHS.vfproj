@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VisualStudioProject ProjectCreator="Intel Fortran" Keyword="Console Application" Version="11.0" ProjectIdGuid="{3830D0DB-3DCE-4F2E-8167-6C7E8F6D44E3}">
+	<Platforms>
+		<Platform Name="Win32"/>
+		<Platform Name="x64"/></Platforms>
+	<Configurations>
+		<Configuration Name="Debug|Win32">
+				<Tool Name="VFFortranCompilerTool" SuppressStartupBanner="true" DebugInformationFormat="debugEnabled" Optimization="optimizeDisabled" WarnInterfaces="true" Traceback="true" BoundsCheck="true" StackFrameCheck="true" RuntimeLibrary="rtMultiThreadedDebugDLL"/>
+				<Tool Name="VFLinkerTool" LinkIncremental="linkIncrementalNo" SuppressStartupBanner="true" GenerateDebugInformation="true" SubSystem="subSystemConsole"/>
+				<Tool Name="VFResourceCompilerTool"/>
+				<Tool Name="VFMidlTool" SuppressStartupBanner="true"/>
+				<Tool Name="VFCustomBuildTool"/>
+				<Tool Name="VFPreLinkEventTool"/>
+				<Tool Name="VFPreBuildEventTool"/>
+				<Tool Name="VFPostBuildEventTool"/>
+				<Tool Name="VFManifestTool" SuppressStartupBanner="true"/></Configuration>
+		<Configuration Name="Release|Win32" OutputDirectory="..\BIN" TargetName="FIRI-WHS-WIN32">
+				<Tool Name="VFFortranCompilerTool" SuppressStartupBanner="true" RealKIND="realKIND8" LocalSavedScalarsZero="true"/>
+				<Tool Name="VFLinkerTool" LinkIncremental="linkIncrementalNo" SuppressStartupBanner="true" SubSystem="subSystemConsole"/>
+				<Tool Name="VFResourceCompilerTool"/>
+				<Tool Name="VFMidlTool" SuppressStartupBanner="true"/>
+				<Tool Name="VFCustomBuildTool"/>
+				<Tool Name="VFPreLinkEventTool"/>
+				<Tool Name="VFPreBuildEventTool"/>
+				<Tool Name="VFPostBuildEventTool"/>
+				<Tool Name="VFManifestTool" SuppressStartupBanner="true"/></Configuration>
+		<Configuration Name="Debug|x64">
+				<Tool Name="VFFortranCompilerTool" SuppressStartupBanner="true" DebugInformationFormat="debugEnabled" Optimization="optimizeDisabled" WarnInterfaces="true" Traceback="true" BoundsCheck="true" StackFrameCheck="true" RuntimeLibrary="rtMultiThreadedDebugDLL"/>
+				<Tool Name="VFLinkerTool" LinkIncremental="linkIncrementalNo" SuppressStartupBanner="true" GenerateDebugInformation="true" SubSystem="subSystemConsole"/>
+				<Tool Name="VFResourceCompilerTool"/>
+				<Tool Name="VFMidlTool" SuppressStartupBanner="true" TargetEnvironment="midlTargetAMD64"/>
+				<Tool Name="VFCustomBuildTool"/>
+				<Tool Name="VFPreLinkEventTool"/>
+				<Tool Name="VFPreBuildEventTool"/>
+				<Tool Name="VFPostBuildEventTool"/>
+				<Tool Name="VFManifestTool" SuppressStartupBanner="true"/></Configuration>
+		<Configuration Name="Release|x64" OutputDirectory="..\BIN" TargetName="FIRI-WHS-WIN64">
+				<Tool Name="VFFortranCompilerTool" SuppressStartupBanner="true" RealKIND="realKIND8" LocalSavedScalarsZero="true"/>
+				<Tool Name="VFLinkerTool" LinkIncremental="linkIncrementalNo" SuppressStartupBanner="true" SubSystem="subSystemConsole"/>
+				<Tool Name="VFResourceCompilerTool"/>
+				<Tool Name="VFMidlTool" SuppressStartupBanner="true" TargetEnvironment="midlTargetAMD64"/>
+				<Tool Name="VFCustomBuildTool"/>
+				<Tool Name="VFPreLinkEventTool"/>
+				<Tool Name="VFPreBuildEventTool"/>
+				<Tool Name="VFPostBuildEventTool"/>
+				<Tool Name="VFManifestTool" SuppressStartupBanner="true"/></Configuration></Configurations>
+	<Files>
+		<Filter Name="Header Files" Filter="fi;fd;h;inc"/>
+		<Filter Name="Resource Files" Filter="rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe"/>
+		<Filter Name="Source Files" Filter="f90;for;f;fpp;ftn;def;odl;idl">
+		<Filter Name="TTUTIL">
+		<File RelativePath="..\SRC\TTUTIL\addinf.for"/>
+		<File RelativePath="..\SRC\TTUTIL\addint.for"/>
+		<File RelativePath="..\SRC\TTUTIL\addrea.for"/>
+		<File RelativePath="..\SRC\TTUTIL\addref.for"/>
+		<File RelativePath="..\SRC\TTUTIL\addstf.for"/>
+		<File RelativePath="..\SRC\TTUTIL\addstr.for"/>
+		<File RelativePath="..\SRC\TTUTIL\ambusy.for"/>
+		<File RelativePath="..\SRC\TTUTIL\copfl2.for"/>
+		<File RelativePath="..\SRC\TTUTIL\decchk.for"/>
+		<File RelativePath="..\SRC\TTUTIL\decdou.for"/>
+		<File RelativePath="..\SRC\TTUTIL\decint.for"/>
+		<File RelativePath="..\SRC\TTUTIL\decrea.for"/>
+		<File RelativePath="..\SRC\TTUTIL\decrec.for"/>
+		<File RelativePath="..\SRC\TTUTIL\dectim.for"/>
+		<File RelativePath="..\SRC\TTUTIL\delfil.for"/>
+		<File RelativePath="..\SRC\TTUTIL\dtardp.for"/>
+		<File RelativePath="..\SRC\TTUTIL\dtdpar.for"/>
+		<File RelativePath="..\SRC\TTUTIL\dtdpst.for"/>
+		<File RelativePath="..\SRC\TTUTIL\dtfsecmp.for"/>
+		<File RelativePath="..\SRC\TTUTIL\dtfsedp.for"/>
+		<File RelativePath="..\SRC\TTUTIL\dtleap.for"/>
+		<File RelativePath="..\SRC\TTUTIL\dtnow.f90"/>
+		<File RelativePath="..\SRC\TTUTIL\dtsys.for"/>
+		<File RelativePath="..\SRC\TTUTIL\entcha.for"/>
+		<File RelativePath="..\SRC\TTUTIL\entdch.for"/>
+		<File RelativePath="..\SRC\TTUTIL\entddo.for"/>
+		<File RelativePath="..\SRC\TTUTIL\entdin.for"/>
+		<File RelativePath="..\SRC\TTUTIL\entdou.for"/>
+		<File RelativePath="..\SRC\TTUTIL\entdre.for"/>
+		<File RelativePath="..\SRC\TTUTIL\entdti.for"/>
+		<File RelativePath="..\SRC\TTUTIL\entdyn.for"/>
+		<File RelativePath="..\SRC\TTUTIL\enthlp.for"/>
+		<File RelativePath="..\SRC\TTUTIL\entint.for"/>
+		<File RelativePath="..\SRC\TTUTIL\entrea.for"/>
+		<File RelativePath="..\SRC\TTUTIL\enttim.for"/>
+		<File RelativePath="..\SRC\TTUTIL\entyno.for"/>
+		<File RelativePath="..\SRC\TTUTIL\extens.for"/>
+		<File RelativePath="..\SRC\TTUTIL\fatalerr.f90"/>
+		<File RelativePath="..\SRC\TTUTIL\flexist.for"/>
+		<File RelativePath="..\SRC\TTUTIL\flname.for"/>
+		<File RelativePath="..\SRC\TTUTIL\fopengstandard.f90"/>
+		<File RelativePath="..\SRC\TTUTIL\fopens.for"/>
+		<File RelativePath="..\SRC\TTUTIL\getrec.for"/>
+		<File RelativePath="..\SRC\TTUTIL\getun.for"/>
+		<File RelativePath="..\SRC\TTUTIL\getun2.for"/>
+		<File RelativePath="..\SRC\TTUTIL\ifindc.f90"/>
+		<File RelativePath="..\SRC\TTUTIL\ifindi.for"/>
+		<File RelativePath="..\SRC\TTUTIL\istart.for"/>
+		<File RelativePath="..\SRC\TTUTIL\iunifl.for"/>
+		<File RelativePath="..\SRC\TTUTIL\lint.for"/>
+		<File RelativePath="..\SRC\TTUTIL\lowerc.for"/>
+		<File RelativePath="..\SRC\TTUTIL\messini.f90"/>
+		<File RelativePath="..\SRC\TTUTIL\messinq.f90"/>
+		<File RelativePath="..\SRC\TTUTIL\messwrt.for"/>
+		<File RelativePath="..\SRC\TTUTIL\movavr.for"/>
+		<File RelativePath="..\SRC\TTUTIL\newlinestandard.f90"/>
+		<File RelativePath="..\SRC\TTUTIL\notnul.for"/>
+		<File RelativePath="..\SRC\TTUTIL\openlogf.f90"/>
+		<File RelativePath="..\SRC\TTUTIL\outar2.f90"/>
+		<File RelativePath="..\SRC\TTUTIL\outcom.for"/>
+		<File RelativePath="..\SRC\TTUTIL\outdat.f90"/>
+		<File RelativePath="..\SRC\TTUTIL\outplt.for"/>
+		<File RelativePath="..\SRC\TTUTIL\outsel.f90"/>
+		<File RelativePath="..\SRC\TTUTIL\parsword.for"/>
+		<File RelativePath="..\SRC\TTUTIL\rchrsrc.for"/>
+		<File RelativePath="..\SRC\TTUTIL\rdacha.for"/>
+		<File RelativePath="..\SRC\TTUTIL\rdador.for"/>
+		<File RelativePath="..\SRC\TTUTIL\rdadou.for"/>
+		<File RelativePath="..\SRC\TTUTIL\rdainr.for"/>
+		<File RelativePath="..\SRC\TTUTIL\rdaint.for"/>
+		<File RelativePath="..\SRC\TTUTIL\rdalog.for"/>
+		<File RelativePath="..\SRC\TTUTIL\rdarea.for"/>
+		<File RelativePath="..\SRC\TTUTIL\rdarer.for"/>
+		<File RelativePath="..\SRC\TTUTIL\rdatim.for"/>
+		<File RelativePath="..\SRC\TTUTIL\rddata.for"/>
+		<File RelativePath="..\SRC\TTUTIL\rddtmp.for"/>
+		<File RelativePath="..\SRC\TTUTIL\rderr.for"/>
+		<File RelativePath="..\SRC\TTUTIL\rderri.for"/>
+		<File RelativePath="..\SRC\TTUTIL\rdfcha.for"/>
+		<File RelativePath="..\SRC\TTUTIL\rdfdor.for"/>
+		<File RelativePath="..\SRC\TTUTIL\rdfdou.for"/>
+		<File RelativePath="..\SRC\TTUTIL\rdfinr.for"/>
+		<File RelativePath="..\SRC\TTUTIL\rdfint.for"/>
+		<File RelativePath="..\SRC\TTUTIL\rdflog.for"/>
+		<File RelativePath="..\SRC\TTUTIL\rdfrea.for"/>
+		<File RelativePath="..\SRC\TTUTIL\rdfrer.for"/>
+		<File RelativePath="..\SRC\TTUTIL\rdfrom.for"/>
+		<File RelativePath="..\SRC\TTUTIL\rdftim.for"/>
+		<File RelativePath="..\SRC\TTUTIL\rdinar.for"/>
+		<File RelativePath="..\SRC\TTUTIL\rdindt.for"/>
+		<File RelativePath="..\SRC\TTUTIL\rdindx.for"/>
+		<File RelativePath="..\SRC\TTUTIL\rdinit.for"/>
+		<File RelativePath="..\SRC\TTUTIL\rdinlv.for"/>
+		<File RelativePath="..\SRC\TTUTIL\rdinne.for"/>
+		<File RelativePath="..\SRC\TTUTIL\rdinqr.for"/>
+		<File RelativePath="..\SRC\TTUTIL\rdinqr2.for"/>
+		<File RelativePath="..\SRC\TTUTIL\rdinqr3.for"/>
+		<File RelativePath="..\SRC\TTUTIL\rdlex.for"/>
+		<File RelativePath="..\SRC\TTUTIL\rdmcha.for"/>
+		<File RelativePath="..\SRC\TTUTIL\rdmdef.for"/>
+		<File RelativePath="..\SRC\TTUTIL\rdmdou.for"/>
+		<File RelativePath="..\SRC\TTUTIL\rdmint.for"/>
+		<File RelativePath="..\SRC\TTUTIL\rdmlog.for"/>
+		<File RelativePath="..\SRC\TTUTIL\rdmodulettutil.f90"/>
+		<File RelativePath="..\SRC\TTUTIL\rdmrea.for"/>
+		<File RelativePath="..\SRC\TTUTIL\rdmtim.for"/>
+		<File RelativePath="..\SRC\TTUTIL\rdpars.for"/>
+		<File RelativePath="..\SRC\TTUTIL\rdscha.for"/>
+		<File RelativePath="..\SRC\TTUTIL\rdsctb.for"/>
+		<File RelativePath="..\SRC\TTUTIL\rdsdor.for"/>
+		<File RelativePath="..\SRC\TTUTIL\rdsdou.for"/>
+		<File RelativePath="..\SRC\TTUTIL\rdsets.for"/>
+		<File RelativePath="..\SRC\TTUTIL\rdsinr.for"/>
+		<File RelativePath="..\SRC\TTUTIL\rdsint.for"/>
+		<File RelativePath="..\SRC\TTUTIL\rdslog.for"/>
+		<File RelativePath="..\SRC\TTUTIL\rdsrea.for"/>
+		<File RelativePath="..\SRC\TTUTIL\rdsrer.for"/>
+		<File RelativePath="..\SRC\TTUTIL\rdstim.for"/>
+		<File RelativePath="..\SRC\TTUTIL\rdtmp1.for"/>
+		<File RelativePath="..\SRC\TTUTIL\rdtmp2.for"/>
+		<File RelativePath="..\SRC\TTUTIL\reaand.for"/>
+		<File RelativePath="..\SRC\TTUTIL\reanor.for"/>
+		<File RelativePath="..\SRC\TTUTIL\recread.f90"/>
+		<File RelativePath="..\SRC\TTUTIL\recreadi.f90"/>
+		<File RelativePath="..\SRC\TTUTIL\recreadt.f90"/>
+		<File RelativePath="..\SRC\TTUTIL\remove.for"/>
+		<File RelativePath="..\SRC\TTUTIL\sfindg.for"/>
+		<File RelativePath="..\SRC\TTUTIL\sortch.for"/>
+		<File RelativePath="..\SRC\TTUTIL\sortin.for"/>
+		<File RelativePath="..\SRC\TTUTIL\str_copy.for"/>
+		<File RelativePath="..\SRC\TTUTIL\swpi4.for"/>
+		<File RelativePath="..\SRC\TTUTIL\ttutil.f90"/>
+		<File RelativePath="..\SRC\TTUTIL\ttutilprefs.f90"/>
+		<File RelativePath="..\SRC\TTUTIL\ttuver.for"/>
+		<File RelativePath="..\SRC\TTUTIL\unifl.for"/>
+		<File RelativePath="..\SRC\TTUTIL\upperc.f90"/>
+		<File RelativePath="..\SRC\TTUTIL\usedun.for"/>
+		<File RelativePath="..\SRC\TTUTIL\ver4_27.for"/>
+		<File RelativePath="..\SRC\TTUTIL\warning.for"/>
+		<File RelativePath="..\SRC\TTUTIL\words.for"/>
+		<File RelativePath="..\SRC\TTUTIL\wracha.for"/>
+		<File RelativePath="..\SRC\TTUTIL\wradou.for"/>
+		<File RelativePath="..\SRC\TTUTIL\wraint.for"/>
+		<File RelativePath="..\SRC\TTUTIL\wralog.for"/>
+		<File RelativePath="..\SRC\TTUTIL\wrarea.for"/>
+		<File RelativePath="..\SRC\TTUTIL\wratim.for"/>
+		<File RelativePath="..\SRC\TTUTIL\wrinit.for"/>
+		<File RelativePath="..\SRC\TTUTIL\wrscha.for"/>
+		<File RelativePath="..\SRC\TTUTIL\wrsdou.for"/>
+		<File RelativePath="..\SRC\TTUTIL\wrsint.for"/>
+		<File RelativePath="..\SRC\TTUTIL\wrslog.for"/>
+		<File RelativePath="..\SRC\TTUTIL\wrsrea.for"/>
+		<File RelativePath="..\SRC\TTUTIL\wrstim.for"/></Filter>
+		<File RelativePath="..\SRC\AMP_BAS.F90"/>
+		<File RelativePath="..\SRC\AMP_PCP.F90"/>
+		<File RelativePath="..\SRC\BAS.F90"/>
+		<File RelativePath="..\SRC\CRP_BAS.F90"/>
+		<File RelativePath="..\SRC\CRP_INT.F90"/>
+		<File RelativePath="..\SRC\CRP_PET.F90"/>
+		<File RelativePath="..\SRC\IRR_BAS.F90"/>
+		<File RelativePath="..\SRC\IRR_FWA.F90"/>
+		<File RelativePath="..\SRC\IRR_OWA.F90"/>
+		<File RelativePath="..\SRC\MAIN.F90"/>
+		<File RelativePath="..\SRC\SHT_BAS.F90"/>
+		<File RelativePath="..\SRC\SHT_CCT.F90"/>
+		<File RelativePath="..\SRC\SHT_GBB.F90"/>
+		<File RelativePath="..\SRC\SHT_GTB.F90"/>
+		<File RelativePath="..\SRC\SHT_STO.F90"/>
+		<File RelativePath="..\SRC\SHT_TMA.F90"/>
+		<File RelativePath="..\SRC\SST_BAS.F90"/>
+		<File RelativePath="..\SRC\SST_CCA.F90"/>
+		<File RelativePath="..\SRC\SST_CCD.F90"/>
+		<File RelativePath="..\SRC\SST_GBB.F90"/>
+		<File RelativePath="..\SRC\SST_GTB.F90"/>
+		<File RelativePath="..\SRC\SST_INF.F90"/>
+		<File RelativePath="..\SRC\SST_STO.F90"/>
+		<File RelativePath="..\SRC\SST_TMA.F90"/>
+		<File RelativePath="..\SRC\SWF_BAS.F90"/>
+		<File RelativePath="..\SRC\SWF_CCF.F90"/>
+		<File RelativePath="..\SRC\SWF_EVP.F90"/>
+		<File RelativePath="..\SRC\SWF_GBB.F90"/>
+		<File RelativePath="..\SRC\SWF_GTB.F90"/>
+		<File RelativePath="..\SRC\SWF_INF.F90"/>
+		<File RelativePath="..\SRC\SWF_RWU.F90"/>
+		<File RelativePath="..\SRC\SWF_STO.F90"/>
+		<File RelativePath="..\SRC\SWF_TMA.F90"/>
+		<File RelativePath="..\SRC\UTL.F90"/>
+		<File RelativePath="..\SRC\VAR.F90"/></Filter></Files>
+	<Globals/></VisualStudioProject>

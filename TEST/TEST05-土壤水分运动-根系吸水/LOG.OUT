@@ -1,0 +1,62 @@
+================================================================================
+                              农田水热盐运移数值模型                 
+                                    FIRI-WHS                                    
+                            中国农业科学院农田灌溉研究所          
+================================================================================
+
+ Data file   BAS.IN with  22 variables parsed by RDINDX
+ Contents of BAS.IN recovered from TMP file
+ Contents of BAS.IN recovered from TMP file
+ Contents of BAS.IN recovered from TMP file
+ Contents of BAS.IN recovered from TMP file
+ Contents of BAS.IN recovered from TMP file
+ Contents of BAS.IN recovered from TMP file
+ Data file   PERIOD.IN with   8 variables parsed by RDINDX
+ Data file   SOIL.IN with  12 variables parsed by RDINDX
+ Contents of SOIL.IN recovered from TMP file
+ Contents of SOIL.IN recovered from TMP file
+ Contents of PERIOD.IN recovered from TMP file
+ Contents of PERIOD.IN recovered from TMP file
+ Contents of BAS.IN recovered from TMP file
+ Contents of PERIOD.IN recovered from TMP file
+ Contents of SOIL.IN recovered from TMP file
+ Contents of PERIOD.IN recovered from TMP file
+
+模拟开始...
+--------------------------------------------------
+  应力期:            1
+  应力期:            2
+  应力期:            3
+  应力期:            4
+  应力期:            5
+  应力期:            6
+  应力期:            7
+  应力期:            8
+  应力期:            9
+  应力期:           10
+  应力期:           11
+  应力期:           12
+  应力期:           13
+  应力期:           14
+  应力期:           15
+  应力期:           16
+  应力期:           17
+  应力期:           18
+  应力期:           19
+  应力期:           20
+  应力期:           21
+  应力期:           22
+  应力期:           23
+  应力期:           24
+  应力期:           25
+  应力期:           26
+  应力期:           27
+  应力期:           28
+  应力期:           29
+  应力期:           30
+----------------------------------------
+模拟结束，用时  3.125E-01 秒
+
+ Temporary file BASRD$00001.TMP deleted by RDDTMP
+ Temporary file PERIODRD$00002.TMP deleted by RDDTMP
+ Temporary file SOILRD$00003.TMP deleted by RDDTMP
