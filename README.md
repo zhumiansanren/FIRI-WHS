@@ -16,9 +16,11 @@ FIRI-WHS 土壤水分运动模块是围绕求解 Richard 方程构建的，在�
 
 由于时间和精力有限，目前无法提供程序使用说明，在 TEST 目录下提供了几个实例，供参考。双击 RUN.BAT 或者在 CMD 中运行RUN.BAT。
 
-输入文件：BAS.IN, PERIOD.IN, SOIL.IN
+输入文件：BAS.IN, SOIL.IN, PERIOD.IN, METEO.IN, CROP.IN
 
-输出文件: LIST.OUT, PERIOD.OUT, OBS.OUT
+输出文件: LIST.OUT, PERIOD.OUT, OBS.OUT, LOG.OUT
+
+绘图文件: Plot.R (需要安装 RStudio)
 
 我们在程序代码中提供了大量的注释，标明了每个变量和函数的用途，以便各位老师和同学阅读和修改。非常欢迎各位老师和同学批评指正，并进一步扩展该程序包。
 
@@ -34,11 +36,11 @@ FIRI-WHS 文件结构
 
   -- BIN 目录，存放可执行文件。
   
-  -- DOC 目录，存在文档。
+  -- DOC 目录，存在模型文档。
   
   -- IVF 目录，存放 Visual Studio 2017 和 Intel Visual FORTRAN 2018 工程文件。
   
-  -- REF 目录，存放参考资料。
+  -- REF 目录，存放参考文献。
 
   -- SRC 目录，存放程序源代码。
 
