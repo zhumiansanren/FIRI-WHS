@@ -33,14 +33,19 @@ FIRI-WHS 土壤水分运动模块是围绕求解 Richard 方程构建的，在�
 FIRI-WHS 文件结构
 
   -- BIN 目录，存放可执行文件。
+  
+  -- DOC 目录，存在文档。
+  
+  -- IVF 目录，存放 Visual Studio 2017 和 Intel Visual FORTRAN 2018 工程文件。
+  
+  -- REF 目录，存放参考资料。
 
   -- SRC 目录，存放程序源代码。
-
-  -- IVF 目录，存放 Visual Studio 2017 和 Intel Visual FORTRAN 2018 工程文件。
 
   -- TEST 目录，存放测试文件。
 
 更新日志
 
 2020年9月2日，发布 FIRI-WHS 基本框架和土壤水分运动子程序包。
+
 2020年9月8日，发布土壤热传导子程序包。
