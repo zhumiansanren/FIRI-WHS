@@ -74,6 +74,7 @@ SUBROUTINE SST_GTB_FM
 
   ! Dirichlet 条件
   IF (ISSTTOP == 1) THEN
+
     IF (ISWFTOP == 1) THEN
       DELV1 = DELV(I) * 0.5
       O1 = (OTOP(JPER) + ONEW(I)) * 0.5
@@ -85,7 +86,7 @@ SUBROUTINE SST_GTB_FM
       CASE (2)
         TOR1 = O1 ** (7.0 / 3.0) / OSAT1 ** 2.0
       END SELECT
-
+      
       DIS(I, 1) = DISL(J) * ABS(QTOP) / DELT / O1 + O1 * DIFW(J) * TOR1
       COF(I) = COF(I) + 0.5 * QTOP - DELT * DIS(I, 1) / DELV1
       RHS(I) = RHS(I) - 0.5 * QTOP * CTOP(JPER) - DELT * DIS(I, 1) / DELV1 * CTOP(JPER)
@@ -146,7 +147,7 @@ SUBROUTINE SST_GTB_BD
 
   ! Neumann 条件
   IF (ISSTTOP == 2) THEN
-   
+    
   END IF
 
   RETURN
