@@ -11,6 +11,7 @@
  Contents of BAS.IN recovered from TMP file
  Contents of BAS.IN recovered from TMP file
  Contents of BAS.IN recovered from TMP file
+ Contents of BAS.IN recovered from TMP file
  Data file   PERIOD.IN with   8 variables parsed by RDINDX
  Data file   SOIL.IN with  12 variables parsed by RDINDX
  Contents of SOIL.IN recovered from TMP file
@@ -55,7 +56,7 @@
   应力期:           29
   应力期:           30
 ----------------------------------------
-模拟结束，用时  3.125E-01 秒
+模拟结束，用时  1.719E-01 秒
 
  Temporary file BASRD$00001.TMP deleted by RDDTMP
  Temporary file PERIODRD$00002.TMP deleted by RDDTMP
