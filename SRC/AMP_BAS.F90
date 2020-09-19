@@ -130,8 +130,7 @@ SUBROUTINE AMP_BAS_ST
 !**************************************************************************************************
 ! 更新随应力期变化的数据
 !**************************************************************************************************
-  USE :: VAR, ONLY : LATITUDE, DOY, WINDHGT, WSMEAN, WS2MEAN, DHMAX, RAD, RADEXT, RADNET, ATMAX, &
-                     ATMIN, ALBEDO, PANGSTROM, RHMEAN
+  USE :: VAR
   IMPLICIT NONE
 
   ! 常数:
