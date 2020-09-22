@@ -232,6 +232,7 @@
 		<File RelativePath="..\SRC\SWF_GBB.F90"/>
 		<File RelativePath="..\SRC\SWF_GTB.F90"/>
 		<File RelativePath="..\SRC\SWF_INF.F90"/>
+		<File RelativePath="..\SRC\SWF_SSK.F90"/>
 		<File RelativePath="..\SRC\SWF_RWU.F90"/>
 		<File RelativePath="..\SRC\SWF_STO.F90"/>
 		<File RelativePath="..\SRC\SWF_TMA.F90"/>

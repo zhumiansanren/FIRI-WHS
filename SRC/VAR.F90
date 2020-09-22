@@ -38,6 +38,7 @@ MODULE VAR
   LOGICAL :: L_SWF_INF
   LOGICAL :: L_SWF_EVP
   LOGICAL :: L_SWF_RWU
+  LOGICAL :: L_SWF_SSK
   LOGICAL :: L_SWF_TMA
 
   ! 控制 SHT 子程序包的启用
@@ -163,6 +164,11 @@ MODULE VAR
   ! LRWU = .TRUE., 是
   !      = .FALSE., 否
   LOGICAL :: LRWU
+
+  ! 控制是否模拟源/汇项
+  ! LSSK = .TRUE., 是
+  !      = .FALSE., 否
+  LOGICAL :: LSSK
 
 
   !------------------------------------------------------------------------------------------------
@@ -402,6 +408,9 @@ MODULE VAR
 
   ! 当前时段土壤单元体之间的水流量 (cm)
   REAL, DIMENSION(:, :), ALLOCATABLE :: QV
+
+  ! 当前应力期土壤单元体的源/汇水量 (cm)
+  REAL, DIMENSION(:), ALLOCATABLE :: WSS
 
 
   !------------------------------------------------------------------------------------------------

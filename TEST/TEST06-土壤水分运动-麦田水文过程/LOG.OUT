@@ -19,10 +19,10 @@
  Data file   PERIOD.IN with   5 variables parsed by RDINDX
  Data file   SOIL.IN with  12 variables parsed by RDINDX
  Data file   METEO.IN with   7 variables parsed by RDINDX
- Data file   CROP.IN with   4 variables parsed by RDINDX
- Contents of SOIL.IN recovered from TMP file
  Contents of PERIOD.IN recovered from TMP file
+ Data file   CROP.IN with   4 variables parsed by RDINDX
  Contents of METEO.IN recovered from TMP file
+ Contents of SOIL.IN recovered from TMP file
  Contents of SOIL.IN recovered from TMP file
  Contents of PERIOD.IN recovered from TMP file
  Contents of PERIOD.IN recovered from TMP file
@@ -124,7 +124,7 @@
   应力期:           89
   应力期:           90
 ----------------------------------------
-模拟结束，用时  2.281E+00 秒
+模拟结束，用时  1.922E+00 秒
 
  Temporary file BASRD$00001.TMP deleted by RDDTMP
  Temporary file PERIODRD$00002.TMP deleted by RDDTMP

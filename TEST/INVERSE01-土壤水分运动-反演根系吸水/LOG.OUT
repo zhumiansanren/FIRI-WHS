@@ -1,0 +1,29 @@
+================================================================================
+                              农田水热盐运移数值模型                 
+                                    FIRI-WHS                                    
+                            中国农业科学院农田灌溉研究所          
+================================================================================
+
+ Data file   BAS.IN with  17 variables parsed by RDINDX
+ Contents of BAS.IN recovered from TMP file
+ Contents of BAS.IN recovered from TMP file
+ Contents of BAS.IN recovered from TMP file
+ Contents of BAS.IN recovered from TMP file
+ Contents of BAS.IN recovered from TMP file
+ Data file   PERIOD.IN with   5 variables parsed by RDINDX
+ Data file   SOIL.IN with  13 variables parsed by RDINDX
+ Contents of SOIL.IN recovered from TMP file
+ Contents of SOIL.IN recovered from TMP file
+ Contents of PERIOD.IN recovered from TMP file
+ Contents of PERIOD.IN recovered from TMP file
+ Contents of SOIL.IN recovered from TMP file
+
+模拟开始...
+--------------------------------------------------
+  应力期:            1
+----------------------------------------
+模拟结束，用时    1.562E-02 秒
+
+ Temporary file BASRD$00001.TMP deleted by RDDTMP
+ Temporary file PERIODRD$00002.TMP deleted by RDDTMP
+ Temporary file SOILRD$00003.TMP deleted by RDDTMP
