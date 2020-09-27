@@ -3,36 +3,35 @@ BEGIN OPTIONS KEYWORDS
 END OPTIONS
 
 BEGIN UCODE_CONTROL_DATA KEYWORDS
-  MCMC = Yes
+  SENSITIVITIES = TRUE
+  OPTIMIZE = TRUE
+  SVD = YES
+  SVDRATIO = 1E-2
 END UCODE_CONTROL_DATA
 
-BEGIN MCMC_CONTROLS KEYWORDS
-  NChain           = 5
-  MaxSamples       = 10000
-  NPair            = 3
-  NCR              = 3
-  JumpStep         = 5
-  UseRegResult     = No
-  Restart          = No
-  GelmanR          = 1.2
-  PrintStep        = 10
-  PrintModelOutput = Yes
-END MCMC_CONTROLS
+BEGIN Reg_GN_Controls Keywords
+  MaxIter       = 100
+  TolPar        = 1E+10
+  MaxChange     = 1E-5
+  SVDPerturbAmt = 0.01
+  SVDMaxChange  = 2.0
+  SVDTolPar     = 0.01
+END Reg_GN_Controls
 
 BEGIN MODEL_COMMAND_LINES
   Command   = Run.bat
   Purpose   = Forward
-  CommandId = UCode-MCMC
+  CommandId = UCODE-SVD
 END MODEL_COMMAND_LINES
 
-BEGIN MCMC_PRIOR_GROUPS TABLE
+BEGIN Parameter_Groups TABLE
   NRow = 2  NCol = 2  ColumnLabels
   GroupName  PDFType
   GP1        uniform
   GP2        normal
-END MCMC_PRIOR_GROUPS
+END Parameter_Groups
 
-BEGIN MCMC_PRIOR_PDF TABLE
+BEGIN MCMC_Parameter_DataPRIOR_PDF TABLE
   NRow = 10  NCol = 6  ColumnLabels
   ParamName GroupName  MCLowerConstraint  MCUpperConstraint  PDFVar1  PDFVar2
   S1        GP1        0.0                0.006              0.0      0.006
@@ -41,7 +40,7 @@ BEGIN MCMC_PRIOR_PDF TABLE
   S4        GP1        0.0                0.006              0.0      0.006
   S5        GP1        0.0                0.006              0.0      0.006
   S6        GP1        0.0                0.006              0.0      0.006
-END MCMC_PRIOR_PDF
+END Parameter_Data
 
 BEGIN OBSERVATION_GROUPS
   GroupName  = moisture
