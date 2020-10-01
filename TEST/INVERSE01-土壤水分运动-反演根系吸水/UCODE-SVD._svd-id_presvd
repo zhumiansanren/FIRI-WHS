@@ -1,0 +1,44 @@
+"PARAMETER NAME"  "SVD-ID statistic (see _svd for vector contributions to SVD-ID stat)"  "Number of SVD parameters = "        1
+S1                1.000000000000000
+S2                0.000000000000000
+S3                0.000000000000000
+S4                0.000000000000000
+S5                0.000000000000000
+S6                0.000000000000000
+
+"If a different SVDNumber is selected, SVD-ID statistic would be:"
+"PARAMETER NAME"  "SVD-ID statistic "  "Number of SVD parameters = "        2
+S1                1.000000000000000
+S2                1.000000000000000
+S3                0.000000000000000
+S4                0.000000000000000
+S5                0.000000000000000
+S6                0.000000000000000
+"PARAMETER NAME"  "SVD-ID statistic "  "Number of SVD parameters = "        3
+S1                1.000000000000000
+S2                1.000000000000000
+S3                1.000000000000000
+S4                0.000000000000000
+S5                0.000000000000000
+S6                0.000000000000000
+"PARAMETER NAME"  "SVD-ID statistic "  "Number of SVD parameters = "        4
+S1                1.000000000000000
+S2                1.000000000000000
+S3                1.000000000000000
+S4                1.000000000000000
+S5                0.000000000000000
+S6                0.000000000000000
+"PARAMETER NAME"  "SVD-ID statistic "  "Number of SVD parameters = "        5
+S1                1.000000000000000
+S2                1.000000000000000
+S3                1.000000000000000
+S4                1.000000000000000
+S5                1.000000000000000
+S6                0.000000000000000
+"PARAMETER NAME"  "SVD-ID statistic "  "Number of SVD parameters = "        6
+S1                1.000000000000000
+S2                1.000000000000000
+S3                1.000000000000000
+S4                1.000000000000000
+S5                1.000000000000000
+S6                1.000000000000000
