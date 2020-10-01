@@ -69,7 +69,7 @@ SUBROUTINE SWF_EVP_RP
 END SUBROUTINE SWF_EVP_RP
 
 
-subroutine SWF_EVP_FM
+SUBROUTINE SWF_EVP_FM
 !**************************************************************************************************
 ! 计算表示地表蒸发的方程组系数
 !**************************************************************************************************
@@ -98,8 +98,8 @@ subroutine SWF_EVP_FM
     RHS(I) = RHS(I) + QEACT
   END IF
 
-  return
-end subroutine SWF_EVP_FM
+  RETURN
+END SUBROUTINE SWF_EVP_FM
 
 
 SUBROUTINE SWF_EVP_BD
