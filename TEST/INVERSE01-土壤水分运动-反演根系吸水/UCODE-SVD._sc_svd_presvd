@@ -1,0 +1,9 @@
+"Decomposition of the CSS (with prior if used) using SVD of the [wt^0.5][X] matrix scaled by parameter values and the #obs+#prior"
+"PARAMETER NAME" "COMPOSITE SCALED SENSITIVITY WITH PRIOR" "RATIO TO LARGEST CSS" "FROM SINGULAR VECTOR      1" "FROM SINGULAR VECTOR      2" "FROM SINGULAR VECTOR      3" "FROM SINGULAR VECTOR      4" "FROM SINGULAR VECTOR      5" "FROM SINGULAR VECTOR      6"
+S1                0.000000000000000                                  NaN                             NaN                           NaN                           NaN                           NaN                           NaN                           NaN
+S2                0.000000000000000                                  NaN                             NaN                           NaN                           NaN                           NaN                           NaN                           NaN
+S3                0.000000000000000                                  NaN                             NaN                           NaN                           NaN                           NaN                           NaN                           NaN
+S4                0.000000000000000                                  NaN                             NaN                           NaN                           NaN                           NaN                           NaN                           NaN
+S5                0.000000000000000                                  NaN                             NaN                           NaN                           NaN                           NaN                           NaN                           NaN
+S6                0.000000000000000                                  NaN                             NaN                           NaN                           NaN                           NaN                           NaN                           NaN
+"NO PRIOR INFORMATION WAS USED IN THE REGRESSION"

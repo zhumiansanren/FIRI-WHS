@@ -1,0 +1,897 @@
+ 
+  VERBOSE=3 -- Warnings, notes, and selected input will be written
+ 
+  Reading input from file: UCODE-SVD.IN
+ 
+ 
+  ******************************************************************************
+  ******************************************************************************
+ 
+                Output from program UCODE_2014, Version:   1.004
+ 
+               Constructed using the JUPITER API, Version:  1.7.3
+ 
+  ******************************************************************************
+  ******************************************************************************
+ 
+   SVD WILL BE USED TO FACILITATE OPTIMIZATION:
+ 
+ 
+  SVDstartparsc must be PARAMETER_DATA when SVDphase=NEW
+ 
+ 
+  Resetting SVDstartparsc to PARAMETER_DATA
+ 
+ 
+  Perform a parameter estimation using SVD starting with parameters in the
+    PARAMETER_DATA block.
+ 
+ 
+ 
+ 
+ -------------------------------------------------------------------------------
+  ECHO UCODE CONTROLS INPUT:
+ 
+  VERBOSE =  3
+ 
+  Calculate singular values and vectors
+  Form NP SVD parameters which are each linear functions of the NP
+    process-model parameters. The linear functions are defined using
+    the singular vectors.
+  Optimize NSVD of the NP SVD parameters, where NSVD<=NP
+  Update process-model parameters. This can result in changes to all
+    process-model parameters or some of them, depending on specification
+    for keyword SVDUPDATE.
+  SVDUPDATE = SVDALL, so all NP process-model parameters will be updated
+    using the optimized NSVD
+  Calculate measures of uncertainty using linear theory
+   1. These intervals will tend to be large if NSVD<NP
+   2. If supportable, add prior information to the least sensitive parameters
+ 
+  MODEL NAME =   GENERIC
+  MODEL LENGTH UNITS =   NA
+  MODEL TIME UNITS =   NA
+  MODEL MASS UNITS =   NA
+ 
+  OPTIMIZATION WILL NOT BE PERFORMED
+  NONLINEAR INTERVALS WILL NOT BE PERFORMED (BY DEFAULT)
+  SENSITIVITIES WILL BE CALCULATED
+  STARTRES - Residuals written at initial parameter values
+  STARTSENS Print dimensionless scaled sensitivities at starting values
+  INTERMEDSENS Do not print any sensitivities at intermed values
+  FINALSENS Print dimensionless scaled sensitivities at final values
+  DATA EXCHANGE FILES WILL BE PRODUCED
+
+
+ ECHO MODEL COMMAND LINES:
+
+ Command ID    Purpose       Command Line
+ ------------  ------------  --------------------------------------------------
+ UCODE-SVD     Forward       Run.bat
+ 
+ *******************************************************
+        NOTE DERIVED_PARAMETERS BLOCK NOT FOUND
+         NO DERIVED PARAMETERS ARE CONSIDERED
+         IF YOU INTENDED TO READ THIS BLOCK
+        CHECK THE SPELLING OF THE BLOCK NAME
+   JUPITER CODES IGNORE BLOCKS WITH MISSPELLED NAMES
+ *******************************************************
+ 
+--------------------------------------------------------------------------------
+
+
+ OBSERVATIONS
+  Total number of observations read---------    30
+  Number of directly extracted observations-    30
+  Number of observations to be derived------     0
+  Number of observations to be used---------    30
+
+  
+
+ OBSERVATION INFORMATION:
+
+ OBSERVATION NAME         GROUP       OBS. VALUE      WEIGHT
+ --------------------  ------------  ------------  ------------
+ O1                    Moisture       0.38340        100.00    
+ O2                    Moisture       0.38510        100.00    
+ O3                    Moisture       0.38670        100.00    
+ O4                    Moisture       0.38830        100.00    
+ O5                    Moisture       0.39000        100.00    
+ O6                    Moisture       0.39160        100.00    
+ O7                    Moisture       0.39320        100.00    
+ O8                    Moisture       0.39490        100.00    
+ O9                    Moisture       0.39650        100.00    
+ O10                   Moisture       0.39810        100.00    
+ O11                   Moisture       0.39980        100.00    
+ O12                   Moisture       0.40140        100.00    
+ O13                   Moisture       0.40300        100.00    
+ O14                   Moisture       0.40470        100.00    
+ O15                   Moisture       0.40630        100.00    
+ O16                   Moisture       0.40370        100.00    
+ O17                   Moisture       0.40110        100.00    
+ O18                   Moisture       0.39840        100.00    
+ O19                   Moisture       0.39580        100.00    
+ O20                   Moisture       0.39320        100.00    
+ O21                   Moisture       0.39060        100.00    
+ O22                   Moisture       0.38790        100.00    
+ O23                   Moisture       0.38530        100.00    
+ O24                   Moisture       0.38270        100.00    
+ O25                   Moisture       0.38010        100.00    
+ O26                   Moisture       0.37740        100.00    
+ O27                   Moisture       0.37480        100.00    
+ O28                   Moisture       0.37220        100.00    
+ O29                   Moisture       0.36960        100.00    
+ O30                   Moisture       0.36690        100.00    
+  
+
+ OBSERVATION-GROUP INFORMATION:
+
+               NUM. OF         PLOT     WEIGHT    COV. MATRIX     DEP.
+ GROUP NAME    MEMBERS  USE?  SYMBOL  MULTIPLIER  IF CORRELATED   TYPE
+ ------------  -------  ----  ------  ----------  -------------  ------
+ Moisture           30   T         1    1.00                     OBS   
+
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+  THERE ARE NO PRIOR EQUATIONS FOR THIS EVALUATION
+
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+
+
+ MODEL-INPUT AND CORRESPONDING TEMPLATE FILES:
+
+ Model-input file: SOIL.IN   Template file: SOIL.TPL
+
+
+ MODEL-OUTPUT AND CORRESPONDING INSTRUCTION FILES:
+
+ Model-output file: OBS.OUT   Instruction file: OBS.INS   Category: OBS   
+
+--------------------------------------------------------------------------------
+
+ PARAMETER INFORMATION READ FROM INPUT:
+
+ No.  Param. name     Group        Value       Lower value   Upper value    Adj?
+ ---- ------------ ------------  ------------  ------------  ------------  -----
+    1 S1           GP1           1.000000E-03   0.00000      0.100000       Y
+    2 S2           GP1           1.000000E-03   0.00000      0.100000       Y
+    3 S3           GP1           1.000000E-03   0.00000      0.100000       Y
+    4 S4           GP1           1.000000E-03   0.00000      0.100000       Y
+    5 S5           GP1           1.000000E-03   0.00000      0.100000       Y
+    6 S6           GP1           1.000000E-03   0.00000      0.100000       Y
+
+ No.  Param. name   LN   SCALEPVAL   PERTURB    MAXCHANGE    TOLPAR    SVDSET
+ ---- ------------  --  ----------  ----------  ---------  ---------    ------
+    1 S1             0   1.000E-05   1.000E-02   1.00      1.000E+10          0
+    2 S2             0   1.000E-05   1.000E-02   1.00      1.000E+10          0
+    3 S3             0   1.000E-05   1.000E-02   1.00      1.000E+10          0
+    4 S4             0   1.000E-05   1.000E-02   1.00      1.000E+10          0
+    5 S5             0   1.000E-05   1.000E-02   1.00      1.000E+10          0
+    6 S6             0   1.000E-05   1.000E-02   1.00      1.000E+10          0
+
+ INFORMATION FOR ADJUSTABLE PARAMETERS READ FROM INPUT:
+
+ Param. name     Group          Value       Lower value    Upper value  Par. no.
+ ------------ ------------  -------------  -------------  -------------  -------
+ S1           GP1            1.000000E-03    0.00000       0.100000           1
+ S2           GP1            1.000000E-03    0.00000       0.100000           2
+ S3           GP1            1.000000E-03    0.00000       0.100000           3
+ S4           GP1            1.000000E-03    0.00000       0.100000           4
+ S5           GP1            1.000000E-03    0.00000       0.100000           5
+ S6           GP1            1.000000E-03    0.00000       0.100000           6
+
+               Sens
+ Param. name   Method  LN   SCALEPVAL   PERTURB    MAXCHANGE    TOLPAR    SVDSET
+ ------------  ------  --  ----------  ----------  ---------  ----------  ------
+ S1                1    0   1.000E-05   1.000E-02   1.00       1.000E+10      0
+ S2                1    0   1.000E-05   1.000E-02   1.00       1.000E+10      0
+ S3                1    0   1.000E-05   1.000E-02   1.00       1.000E+10      0
+ S4                1    0   1.000E-05   1.000E-02   1.00       1.000E+10      0
+ S5                1    0   1.000E-05   1.000E-02   1.00       1.000E+10      0
+ S6                1    0   1.000E-05   1.000E-02   1.00       1.000E+10      0
+
+********************************************************************************
+ END ECHO OF INPUT - REPORT RESULTS OF SIMULATION
+********************************************************************************
+
+
+  Process Model Run #:      1
+
+ -------------------------------------------------------------------
+ FIT OF SIMULATED EQUIVALENTS TO OBSERVATIONS
+
+ OBSERVATION            MEASURED      SIMULATED                            WEIGHTED
+    NAME                 VALUE          VALUE      RESIDUAL   WEIGHT**.5   RESIDUAL
+
+ O1                     0.383400      0.295600      8.7800E-02    10.0      0.8780    
+ O2                     0.385100      0.280600      0.1045        10.0       1.045    
+ O3                     0.386700      0.259000      0.1277        10.0       1.277    
+ O4                     0.388300      0.230600      0.1577        10.0       1.577    
+ O5                     0.390000      0.207000      0.1830        10.0       1.830    
+ O6                     0.391600      0.200300      0.1913        10.0       1.913    
+ O7                     0.393200      0.199600      0.1936        10.0       1.936    
+ O8                     0.394900      0.199500      0.1954        10.0       1.954    
+ O9                     0.396500      0.199500      0.1970        10.0       1.970    
+ O10                    0.398100      0.199500      0.1986        10.0       1.986    
+ O11                    0.399800      0.199500      0.2003        10.0       2.003    
+ O12                    0.401400      0.199500      0.2019        10.0       2.019    
+ O13                    0.403000      0.199500      0.2035        10.0       2.035    
+ O14                    0.404700      0.199500      0.2052        10.0       2.052    
+ O15                    0.406300      0.199500      0.2068        10.0       2.068    
+ O16                    0.403700      0.199500      0.2042        10.0       2.042    
+ O17                    0.401100      0.199500      0.2016        10.0       2.016    
+ O18                    0.398400      0.199500      0.1989        10.0       1.989    
+ O19                    0.395800      0.199500      0.1963        10.0       1.963    
+ O20                    0.393200      0.199500      0.1937        10.0       1.937    
+ O21                    0.390600      0.199500      0.1911        10.0       1.911    
+ O22                    0.387900      0.199500      0.1884        10.0       1.884    
+ O23                    0.385300      0.199500      0.1858        10.0       1.858    
+ O24                    0.382700      0.199500      0.1832        10.0       1.832    
+ O25                    0.380100      0.199500      0.1806        10.0       1.806    
+ O26                    0.377400      0.199500      0.1779        10.0       1.779    
+ O27                    0.374800      0.199500      0.1753        10.0       1.753    
+ O28                    0.372200      0.199500      0.1727        10.0       1.727    
+ O29                    0.369600      0.199500      0.1701        10.0       1.701    
+ O30                    0.366900      0.199700      0.1672        10.0       1.672    
+
+ STATISTICS FOR ALL RESIDUALS :
+ AVERAGE WEIGHTED RESIDUAL  : 0.181E+01
+ # RESIDUALS >= 0. :     30
+ # RESIDUALS < 0.  :      0
+ NUMBER OF RUNS  :    1  IN   30 OBSERVATIONS
+
+ COULD NOT CALCULATE THE RUNS STATISTIC
+
+ STATISTICS FOR THESE RESIDUALS:
+ MAXIMUM WEIGHTED RESIDUAL:  0.207E+01  Observation: O15                 
+ MINIMUM WEIGHTED RESIDUAL:  0.878E+00  Observation: O1                  
+ AVERAGE WEIGHTED RESIDUAL:  0.181E+01
+ # RESIDUALS >= 0.  :      30
+ # RESIDUALS <  0.  :       0
+ NUMBER OF RUNS:        1  IN       30 OBSERVATIONS
+
+ SUM OF SQUARED, WEIGHTED RESIDUALS:
+   DEPENDENT VARIABLES:    101.0735    
+
+ NUMBER OF INCLUDED OBSERVATIONS =      30 OF      30
+
+********************************************************************************
+********************************************************************************
+
+ CALCULATING SENSITIVITIES FOR THE INITIAL PARAMETERS
+
+ Method of obtaining sensitivities is: PERTURBATION SENSITIVITY
+
+ PARAMETER         VALUE      PERTURBED VALUE   DIFFERENCE   PERTURB DIRECTION
+ S1             0.10000E-02     0.10100E-02     0.10000E-04      FORWARD 
+
+ PARAMETER         VALUE      PERTURBED VALUE   DIFFERENCE   PERTURB DIRECTION
+ S2             0.10000E-02     0.10100E-02     0.10000E-04      FORWARD 
+
+ PARAMETER         VALUE      PERTURBED VALUE   DIFFERENCE   PERTURB DIRECTION
+ S3             0.10000E-02     0.10100E-02     0.10000E-04      FORWARD 
+
+ PARAMETER         VALUE      PERTURBED VALUE   DIFFERENCE   PERTURB DIRECTION
+ S4             0.10000E-02     0.10100E-02     0.10000E-04      FORWARD 
+
+ PARAMETER         VALUE      PERTURBED VALUE   DIFFERENCE   PERTURB DIRECTION
+ S5             0.10000E-02     0.10100E-02     0.10000E-04      FORWARD 
+
+ PARAMETER         VALUE      PERTURBED VALUE   DIFFERENCE   PERTURB DIRECTION
+ S6             0.10000E-02     0.10100E-02     0.10000E-04      FORWARD 
+
+  Process Model Run #:      2
+
+  Process Model Run #:      3
+
+  Process Model Run #:      4
+
+  Process Model Run #:      5
+
+  Process Model Run #:      6
+
+  Process Model Run #:      7
+
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+
+ SENSITIVITIES ARE FIT-INDEPENDENT STATISTICS
+
+ DIMENSIONLESS SCALED SENSITIVITIES (SCALED BY (PARAMETER_VALUE*(wt**.5))
+
+                   PARAMETER:  S1            S2            S3          
+ OBS #  OBSERVATION ---------  ------------  ------------  ------------
+     1  O1                      0.0000        0.0000        0.0000    
+     2  O2                      0.0000        0.0000        0.0000    
+     3  O3                      0.0000        0.0000        0.0000    
+     4  O4                      0.0000        0.0000        0.0000    
+     5  O5                      0.0000        0.0000        0.0000    
+     6  O6                      0.0000        0.0000        0.0000    
+     7  O7                      0.0000        0.0000        0.0000    
+     8  O8                      0.0000        0.0000        0.0000    
+     9  O9                      0.0000        0.0000        0.0000    
+    10  O10                     0.0000        0.0000        0.0000    
+    11  O11                     0.0000        0.0000        0.0000    
+    12  O12                     0.0000        0.0000        0.0000    
+    13  O13                     0.0000        0.0000        0.0000    
+    14  O14                     0.0000        0.0000        0.0000    
+    15  O15                     0.0000        0.0000        0.0000    
+    16  O16                     0.0000        0.0000        0.0000    
+    17  O17                     0.0000        0.0000        0.0000    
+    18  O18                     0.0000        0.0000        0.0000    
+    19  O19                     0.0000        0.0000        0.0000    
+    20  O20                     0.0000        0.0000        0.0000    
+    21  O21                     0.0000        0.0000        0.0000    
+    22  O22                     0.0000        0.0000        0.0000    
+    23  O23                     0.0000        0.0000        0.0000    
+    24  O24                     0.0000        0.0000        0.0000    
+    25  O25                     0.0000        0.0000        0.0000    
+    26  O26                     0.0000        0.0000        0.0000    
+    27  O27                     0.0000        0.0000        0.0000    
+    28  O28                     0.0000        0.0000        0.0000    
+    29  O29                     0.0000        0.0000        0.0000    
+    30  O30                     0.0000        0.0000        0.0000    
+
+ DIMENSIONLESS SCALED SENSITIVITIES (SCALED BY (PARAMETER_VALUE*(wt**.5))
+
+                   PARAMETER:  S4            S5            S6          
+ OBS #  OBSERVATION ---------  ------------  ------------  ------------
+     1  O1                      0.0000        0.0000        0.0000    
+     2  O2                      0.0000        0.0000        0.0000    
+     3  O3                      0.0000        0.0000        0.0000    
+     4  O4                      0.0000        0.0000        0.0000    
+     5  O5                      0.0000        0.0000        0.0000    
+     6  O6                      0.0000        0.0000        0.0000    
+     7  O7                      0.0000        0.0000        0.0000    
+     8  O8                      0.0000        0.0000        0.0000    
+     9  O9                      0.0000        0.0000        0.0000    
+    10  O10                     0.0000        0.0000        0.0000    
+    11  O11                     0.0000        0.0000        0.0000    
+    12  O12                     0.0000        0.0000        0.0000    
+    13  O13                     0.0000        0.0000        0.0000    
+    14  O14                     0.0000        0.0000        0.0000    
+    15  O15                     0.0000        0.0000        0.0000    
+    16  O16                     0.0000        0.0000        0.0000    
+    17  O17                     0.0000        0.0000        0.0000    
+    18  O18                     0.0000        0.0000        0.0000    
+    19  O19                     0.0000        0.0000        0.0000    
+    20  O20                     0.0000        0.0000        0.0000    
+    21  O21                     0.0000        0.0000        0.0000    
+    22  O22                     0.0000        0.0000        0.0000    
+    23  O23                     0.0000        0.0000        0.0000    
+    24  O24                     0.0000        0.0000        0.0000    
+    25  O25                     0.0000        0.0000        0.0000    
+    26  O26                     0.0000        0.0000        0.0000    
+    27  O27                     0.0000        0.0000        0.0000    
+    28  O28                     0.0000        0.0000        0.0000    
+    29  O29                     0.0000        0.0000        0.0000    
+    30  O30                     0.0000        0.0000        0.0000    
+
+ COMPOSITE SCALED SENSITIVITIES ((SUM OF THE SQUARED DSS)/ND)**.5
+  DSS = DIMENSIONLESS SCALED SENSITIVITIES (SCALED BY (PARAMETER_VALUE*(wt**.5))
+  SENSITIVITIES ARE FIT-INDEPENDENT STATISTICS
+
+  PARAMETER    COMPOSITE SCALED SENSITIVITY    RATIO TO MAXIMUM
+  ----------   ----------------------------    ----------------
+  S1                    0.00000E+00                     NaN
+  S2                    0.00000E+00                     NaN
+  S3                    0.00000E+00                     NaN
+  S4                    0.00000E+00                     NaN
+  S5                    0.00000E+00                     NaN
+  S6                    0.00000E+00                     NaN
+
+ SMALLEST AND LARGEST WEIGHTED RESIDUALS
+
+             SMALLEST WEIGHTED RESIDUALS
+                      WEIGHTED    PERCENT OF   
+ NAME                 RESIDUAL     OBJ FUNC
+ O1                      0.878          0.76
+ O2                       1.04          1.08
+ O3                       1.28          1.61
+ O4                       1.58          2.46
+ O30                      1.67          2.77
+
+             LARGEST  WEIGHTED RESIDUALS
+                      WEIGHTED    PERCENT OF   
+ NAME                 RESIDUAL     OBJ FUNC
+ O15                      2.07          4.23
+ O14                      2.05          4.17
+ O16                      2.04          4.13
+ O13                      2.04          4.10
+ O12                      2.02          4.03
+
+ CORRELATION BETWEEN ORDERED WEIGHTED RESIDUALS AND NORMAL ORDER STATISTICS
+ FOR OBSERVATIONS =    0.740    
+
+--------------------------------------------------------------------------------
+ COMMENTS ON THE INTERPRETATION OF THE CORRELATION BETWEEN
+ WEIGHTED RESIDUALS AND NORMAL ORDER STATISTICS:
+
+ Generally, IF the reported CORRELATION is LESS than the critical value,
+ at the selected significance level (usually 5 or 10%), the hypothesis
+ that the weighted residuals are INDEPENDENT AND NORMALLY DISTRIBUTED
+ would be REJECTED.  HOWEVER, in this case, conditions are outside of
+ the range of published critical values as discussed below.
+
+ The sum of the number of observations and prior information items is    30
+ which is less than 35, the minimum value for which critical values are
+ published.  Therefore, the critical values for the 5 and 10% significance
+ levels are less than 0.943 and 0.952, respectively.
+
+ CORRELATIONS GREATER than these critical values indicate that, probably, the 
+ weighted residuals ARE INDEPENDENT AND NORMALLY DISTRIBUTED.
+
+ Correlations LESS than these critical values MAY BE ACCEPTABLE, and
+ rejection of the hypothesis is not necessarily warranted.
+
+ The Kolmogorov-Smirnov test can be used to further evaluate the residuals.
+ --------------------------------------------------------------------------
+
+
+================================================================================
+   START ANALYTICAL INFORMATION RELATED TO SENSITIVITY and PARAMETER MATRICES
+================================================================================
+
+
+          VARIANCE-COVARIANCE MATRIX FOR THE PARAMETERS
+          ---------------------------------------------
+
+       !!!!!CALCULATED FOR STARTING PARAMETER VALUES!!!!!!
+
+              S1           S2           S3           S4           S5           S6          
+ ...........................................................................................
+ S1             4.2114       0.0000       0.0000       0.0000       0.0000       0.0000    
+ S2             0.0000       4.2114       0.0000       0.0000       0.0000       0.0000    
+ S3             0.0000       0.0000       4.2114       0.0000       0.0000       0.0000    
+ S4             0.0000       0.0000       0.0000       4.2114       0.0000       0.0000    
+ S5             0.0000       0.0000       0.0000       0.0000       4.2114       0.0000    
+ S6             0.0000       0.0000       0.0000       0.0000       0.0000       4.2114    
+
+        THE CORRELATION MATRIX IS FIT-INDEPENDENT
+
+          -------------------------------------
+          CORRELATION MATRIX FOR THE PARAMETERS
+          -------------------------------------
+
+       !!!!!CALCULATED FOR STARTING PARAMETER VALUES!!!!!!
+
+              S1           S2           S3           S4           S5           S6          
+ ...........................................................................................
+ S1             1.0000       0.0000       0.0000       0.0000       0.0000       0.0000    
+ S2             0.0000       1.0000       0.0000       0.0000       0.0000       0.0000    
+ S3             0.0000       0.0000       1.0000       0.0000       0.0000       0.0000    
+ S4             0.0000       0.0000       0.0000       1.0000       0.0000       0.0000    
+ S5             0.0000       0.0000       0.0000       0.0000       1.0000       0.0000    
+ S6             0.0000       0.0000       0.0000       0.0000       0.0000       1.0000    
+
+ THE CORRELATION OF THE FOLLOWING PARAMETER PAIRS >= .95
+     PARAMETER   PARAMETER   CORRELATION
+
+        NONE 
+
+ THE CORRELATION OF THE FOLLOWING PARAMETER PAIRS IS BETWEEN .90 AND .95
+     PARAMETER   PARAMETER   CORRELATION
+
+        NONE 
+
+ THE CORRELATION OF THE FOLLOWING PARAMETER PAIRS IS BETWEEN .85 AND .90
+     PARAMETER   PARAMETER   CORRELATION
+
+        NONE 
+
+================================================================================
+    END ANALYTICAL INFORMATION RELATED TO SENSITIVITY and PARAMETER MATRICES
+              ***** SEE FILES _mv _mc _svd _sc_svd _eig *****
+================================================================================
+
+
+  LEAST-SQUARES OBJ FUNC (OBS. ONLY)----- =  101.07    
+  NUMBER OF INCLUDED OBSERVATIONS-------- =      30 OF      30
+  NUMBER OF PRIOR ESTIMATES-------------- =       0
+  NUMBER OF ESTIMATED PARAMETERS--------- =       6
+
+  CALCULATED ERROR VARIANCE (CEV)-------- =  4.2114    
+  95% CONFIDENCE INTERVAL ON CEV--------- =  2.5679      8.1511    
+  STANDARD ERROR ------------------------ =  2.0522    
+  95% CONFIDENCE INTERVAL ON STD ERR----- =  1.6025      2.8550    
+
+  CORRELATION COEFFICIENT---------------- = -.16903    
+  NUMBER OF GAUSS-NEWTON ITERATIONS------ =       0
+
+
+  STATISTICS FOR EVALUATING ALTERNATIVE MODELS:
+
+    No prior used in this parameter estimation
+    MAX LIKE OBJ FUNC OBSERVATIONS ONLY (MLOFO)----------- =  36.440    
+    LN DETERMINANT of Fisher Information Matrix (OBS ONLY) = -7.2879    
+
+    MODEL EVALUATION MEASURES: 
+
+      OBSERVATIONS ONLY (no prior used in this parameter estimation)
+      AIC CRITERION-------------  =  50.440    
+      AICc CRITERION------------  =  55.530    
+      BIC CRITERION-------------  =  60.248    
+      KASHYAP CRITERION---------  =  18.124    
+
+
+********************************************************************************
+********************************************************************************
+
+
+     OPTIMIZATION USING SVD PARAMETERS WILL CONTINUE FROM THE
+                   SENSITIVITY ANALYSIS IN THIS UCODE RUN
+
+
+********************************************************************************
+********************************************************************************
+
+
+
+--------------------------------------------------------------------------------
+
+ PARAMETER INFORMATION READ FROM PARAMETER_DATA/PARAMETER_VALUES:
+
+ No.  Param. name     Group        Value       Lower value   Upper value    Adj?
+ ---- ------------ ------------  ------------  ------------  ------------  -----
+    1 S1           GP1           1.000000E-03   0.00000      0.100000       Y
+    2 S2           GP1           1.000000E-03   0.00000      0.100000       Y
+    3 S3           GP1           1.000000E-03   0.00000      0.100000       Y
+    4 S4           GP1           1.000000E-03   0.00000      0.100000       Y
+    5 S5           GP1           1.000000E-03   0.00000      0.100000       Y
+    6 S6           GP1           1.000000E-03   0.00000      0.100000       Y
+
+ No.  Param. name   LN   SCALEPVAL   PERTURB    MAXCHANGE    TOLPAR    SVDSET
+ ---- ------------  --  ----------  ----------  ---------  ---------    ------
+    1 S1             0   1.000E-05   1.000E-02   1.00      1.000E+10          0
+    2 S2             0   1.000E-05   1.000E-02   1.00      1.000E+10          0
+    3 S3             0   1.000E-05   1.000E-02   1.00      1.000E+10          0
+    4 S4             0   1.000E-05   1.000E-02   1.00      1.000E+10          0
+    5 S5             0   1.000E-05   1.000E-02   1.00      1.000E+10          0
+    6 S6             0   1.000E-05   1.000E-02   1.00      1.000E+10          0
+
+ INFORMATION FOR ADJUSTABLE PARAMETERS READ FROM PARAMETER_DATA/PARAMETER_VALUES:
+
+ Param. name     Group          Value       Lower value    Upper value  Par. no.
+ ------------ ------------  -------------  -------------  -------------  -------
+ S1           GP1            1.000000E-03    0.00000       0.100000           1
+ S2           GP1            1.000000E-03    0.00000       0.100000           2
+ S3           GP1            1.000000E-03    0.00000       0.100000           3
+ S4           GP1            1.000000E-03    0.00000       0.100000           4
+ S5           GP1            1.000000E-03    0.00000       0.100000           5
+ S6           GP1            1.000000E-03    0.00000       0.100000           6
+
+               Sens
+ Param. name   Method  LN   SCALEPVAL   PERTURB    MAXCHANGE    TOLPAR    SVDSET
+ ------------  ------  --  ----------  ----------  ---------  ----------  ------
+ S1                1    0   1.000E-05   1.000E-02   1.00       1.000E+10      0
+ S2                1    0   1.000E-05   1.000E-02   1.00       1.000E+10      0
+ S3                1    0   1.000E-05   1.000E-02   1.00       1.000E+10      0
+ S4                1    0   1.000E-05   1.000E-02   1.00       1.000E+10      0
+ S5                1    0   1.000E-05   1.000E-02   1.00       1.000E+10      0
+ S6                1    0   1.000E-05   1.000E-02   1.00       1.000E+10      0
+
+
+________________________________________________________________________
+
+
+
+--------------------------------------------------------------------------------
+ PARAMETER INFORMATION FROM PREVIOUS EVALUATION:
+
+--------------------------------------------------------------------------------
+ PARAMETER INFORMATION READ FROM the MAIN UCODE INPUT and:
+  UCODE-SVD._paopt
+
+ No.  Param. name     Group        Value       Lower value   Upper value    Adj?
+ ---- ------------ ------------  ------------  ------------  ------------  -----
+    1 S1           GP1           1.000000E-03   0.00000      0.100000       Y
+    2 S2           GP1           1.000000E-03   0.00000      0.100000       Y
+    3 S3           GP1           1.000000E-03   0.00000      0.100000       Y
+    4 S4           GP1           1.000000E-03   0.00000      0.100000       Y
+    5 S5           GP1           1.000000E-03   0.00000      0.100000       Y
+    6 S6           GP1           1.000000E-03   0.00000      0.100000       Y
+
+ No.  Param. name   LN   SCALEPVAL   PERTURB    MAXCHANGE    TOLPAR    SVDSET
+ ---- ------------  --  ----------  ----------  ---------  ---------    ------
+    1 S1             0   1.000E-05   1.000E-02   1.00      1.000E+10          0
+    2 S2             0   1.000E-05   1.000E-02   1.00      1.000E+10          0
+    3 S3             0   1.000E-05   1.000E-02   1.00      1.000E+10          0
+    4 S4             0   1.000E-05   1.000E-02   1.00      1.000E+10          0
+    5 S5             0   1.000E-05   1.000E-02   1.00      1.000E+10          0
+    6 S6             0   1.000E-05   1.000E-02   1.00      1.000E+10          0
+
+________________________________________________________________________
+ 
+
+________________________________________________________________________
+
+
+  SVD PARAMETER CONTROL:
+
+  SVD              YES  
+  SVDPHASE         NEW     
+  SVDSTARTPARS     PARAMETER_DATA
+  SVDNEWVECTORS    NO   
+  SVDUPDATE        SVDALL         
+  SVDPRINT         NO   
+  SVDNUMBER                      0
+  SVDRATIO           1.0000000E-04
+  SVDUPDATE_PCC      9.7000000E-01
+  SVDUPDATE_CSSRAT   1.0000000E-02
+  SVDUPDATE_CSSABS   1.0000000E+00
+  SVDPERTURBAMT      1.0000000E-02
+  SVDMAXCHANGE       1.0000000E+00
+  SVDTOLPAR          1.0000000E-04
+
+
+ SVDRATIO IS USED TO DETERMINE THE NUMBER OF SVD PARAMETERS
+   SVDRATIO IS               :   1.0000E-04
+   LARGEST SINGULAR VALUE IS :   0.0000E+00
+     SINGULAR VALUE   RATIO TO LARGEST VALUE
+
+                  1      1.0000E+00
+                  2             NaN
+                  3             NaN
+                  4             NaN
+                  5             NaN
+                  6             NaN
+
+     6  SINGULAR VALUES WILL BE USED IN THE REGRESSION
+
+
+
+________________________________________________________________________
+
+ PARAMETER VALUES USED TO CALCULATE SINGULAR VECTORS FOR SVD PARAMETERS:
+ Param. name           Value      Adjustable      Adjustable
+                                  before SVD       with SVD
+ ------------  --------------     ----------      ----------
+ S1              1.000000E-03         T               T
+ S2              1.000000E-03         T               T
+ S3              1.000000E-03         T               T
+ S4              1.000000E-03         T               T
+ S5              1.000000E-03         T               T
+ S6              1.000000E-03         T               T
+
+________________________________________________________________________
+
+ Singular vectors are listed in the _svd data-exchange file
+
+ SVD PARAMETERS = [SingularVectors]^T * b, using ln(b) if transformed: 
+
+ Param. name     Value
+ ------------    ------------
+
+ svd1            1.000000E-03
+ svd2            1.000000E-03
+ svd3            1.000000E-03
+ svd4            1.000000E-03
+ svd5            1.000000E-03
+ svd6            1.000000E-03
+
+________________________________________________________________________
+
+ VALUES OF PROCESS MODEL PARAMETERS THAT WERE ADJUSTABLE IN REGRESSION:
+
+ S1           S2           S3           S4           S5           S6          
+   1.0000E-03   1.0000E-03   1.0000E-03   1.0000E-03   1.0000E-03   1.0000E-03
+
+ VALUES OF ALL PROCESS MODEL PARAMETERS IN DATA BLOCK:
+
+ S1           S2           S3           S4           S5           S6          
+   1.0000E-03   1.0000E-03   1.0000E-03   1.0000E-03   1.0000E-03   1.0000E-03
+
+  Process Model Run #:      8
+
+ -------------------------------------------------------------------
+ FIT OF SIMULATED EQUIVALENTS TO OBSERVATIONS
+
+ OBSERVATION            MEASURED      SIMULATED                            WEIGHTED
+    NAME                 VALUE          VALUE      RESIDUAL   WEIGHT**.5   RESIDUAL
+
+ O1                     0.383400      0.295600      8.7800E-02    10.0      0.8780    
+ O2                     0.385100      0.280600      0.1045        10.0       1.045    
+ O3                     0.386700      0.259000      0.1277        10.0       1.277    
+ O4                     0.388300      0.230600      0.1577        10.0       1.577    
+ O5                     0.390000      0.207000      0.1830        10.0       1.830    
+ O6                     0.391600      0.200300      0.1913        10.0       1.913    
+ O7                     0.393200      0.199600      0.1936        10.0       1.936    
+ O8                     0.394900      0.199500      0.1954        10.0       1.954    
+ O9                     0.396500      0.199500      0.1970        10.0       1.970    
+ O10                    0.398100      0.199500      0.1986        10.0       1.986    
+ O11                    0.399800      0.199500      0.2003        10.0       2.003    
+ O12                    0.401400      0.199500      0.2019        10.0       2.019    
+ O13                    0.403000      0.199500      0.2035        10.0       2.035    
+ O14                    0.404700      0.199500      0.2052        10.0       2.052    
+ O15                    0.406300      0.199500      0.2068        10.0       2.068    
+ O16                    0.403700      0.199500      0.2042        10.0       2.042    
+ O17                    0.401100      0.199500      0.2016        10.0       2.016    
+ O18                    0.398400      0.199500      0.1989        10.0       1.989    
+ O19                    0.395800      0.199500      0.1963        10.0       1.963    
+ O20                    0.393200      0.199500      0.1937        10.0       1.937    
+ O21                    0.390600      0.199500      0.1911        10.0       1.911    
+ O22                    0.387900      0.199500      0.1884        10.0       1.884    
+ O23                    0.385300      0.199500      0.1858        10.0       1.858    
+ O24                    0.382700      0.199500      0.1832        10.0       1.832    
+ O25                    0.380100      0.199500      0.1806        10.0       1.806    
+ O26                    0.377400      0.199500      0.1779        10.0       1.779    
+ O27                    0.374800      0.199500      0.1753        10.0       1.753    
+ O28                    0.372200      0.199500      0.1727        10.0       1.727    
+ O29                    0.369600      0.199500      0.1701        10.0       1.701    
+ O30                    0.366900      0.199700      0.1672        10.0       1.672    
+
+ STATISTICS FOR ALL RESIDUALS :
+ AVERAGE WEIGHTED RESIDUAL  : 0.181E+01
+ # RESIDUALS >= 0. :     30
+ # RESIDUALS < 0.  :      0
+ NUMBER OF RUNS  :    1  IN   30 OBSERVATIONS
+
+ COULD NOT CALCULATE THE RUNS STATISTIC
+
+ STATISTICS FOR THESE RESIDUALS:
+ MAXIMUM WEIGHTED RESIDUAL:  0.207E+01  Observation: O15                 
+ MINIMUM WEIGHTED RESIDUAL:  0.878E+00  Observation: O1                  
+ AVERAGE WEIGHTED RESIDUAL:  0.181E+01
+ # RESIDUALS >= 0.  :      30
+ # RESIDUALS <  0.  :       0
+ NUMBER OF RUNS:        1  IN       30 OBSERVATIONS
+
+ SUM OF SQUARED, WEIGHTED RESIDUALS:
+   DEPENDENT VARIABLES:    101.0735    
+
+ NUMBER OF INCLUDED OBSERVATIONS =      30 OF      30
+
+********************************************************************************
+********************************************************************************
+
+ CALCULATING SENSITIVITIES FOR THE SVD PARAMETERS
+
+ Method of obtaining sensitivities is: PERTURBATION SENSITIVITY
+
+ PARAMETER         VALUE      PERTURBED VALUE   DIFFERENCE   PERTURB DIRECTION
+ svd1           0.10000E-02     0.10100E-02     0.10000E-04      FORWARD 
+
+ PARAMETER         VALUE      PERTURBED VALUE   DIFFERENCE   PERTURB DIRECTION
+ svd2           0.10000E-02     0.10100E-02     0.10000E-04      FORWARD 
+
+ PARAMETER         VALUE      PERTURBED VALUE   DIFFERENCE   PERTURB DIRECTION
+ svd3           0.10000E-02     0.10100E-02     0.10000E-04      FORWARD 
+
+ PARAMETER         VALUE      PERTURBED VALUE   DIFFERENCE   PERTURB DIRECTION
+ svd4           0.10000E-02     0.10100E-02     0.10000E-04      FORWARD 
+
+ PARAMETER         VALUE      PERTURBED VALUE   DIFFERENCE   PERTURB DIRECTION
+ svd5           0.10000E-02     0.10100E-02     0.10000E-04      FORWARD 
+
+ PARAMETER         VALUE      PERTURBED VALUE   DIFFERENCE   PERTURB DIRECTION
+ svd6           0.10000E-02     0.10100E-02     0.10000E-04      FORWARD 
+
+  Process Model Run #:      9
+
+  Process Model Run #:     10
+
+  Process Model Run #:     11
+
+  Process Model Run #:     12
+
+  Process Model Run #:     13
+
+  Process Model Run #:     14
+
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+
+ SENSITIVITIES ARE FIT-INDEPENDENT STATISTICS
+
+ DIMENSIONLESS SCALED SENSITIVITIES (SCALED BY (PARAMETER_VALUE*(wt**.5))
+
+                   PARAMETER:  svd1          svd2          svd3        
+ OBS #  OBSERVATION ---------  ------------  ------------  ------------
+     1  O1                      0.0000        0.0000        0.0000    
+     2  O2                      0.0000        0.0000        0.0000    
+     3  O3                      0.0000        0.0000        0.0000    
+     4  O4                      0.0000        0.0000        0.0000    
+     5  O5                      0.0000        0.0000        0.0000    
+     6  O6                      0.0000        0.0000        0.0000    
+     7  O7                      0.0000        0.0000        0.0000    
+     8  O8                      0.0000        0.0000        0.0000    
+     9  O9                      0.0000        0.0000        0.0000    
+    10  O10                     0.0000        0.0000        0.0000    
+    11  O11                     0.0000        0.0000        0.0000    
+    12  O12                     0.0000        0.0000        0.0000    
+    13  O13                     0.0000        0.0000        0.0000    
+    14  O14                     0.0000        0.0000        0.0000    
+    15  O15                     0.0000        0.0000        0.0000    
+    16  O16                     0.0000        0.0000        0.0000    
+    17  O17                     0.0000        0.0000        0.0000    
+    18  O18                     0.0000        0.0000        0.0000    
+    19  O19                     0.0000        0.0000        0.0000    
+    20  O20                     0.0000        0.0000        0.0000    
+    21  O21                     0.0000        0.0000        0.0000    
+    22  O22                     0.0000        0.0000        0.0000    
+    23  O23                     0.0000        0.0000        0.0000    
+    24  O24                     0.0000        0.0000        0.0000    
+    25  O25                     0.0000        0.0000        0.0000    
+    26  O26                     0.0000        0.0000        0.0000    
+    27  O27                     0.0000        0.0000        0.0000    
+    28  O28                     0.0000        0.0000        0.0000    
+    29  O29                     0.0000        0.0000        0.0000    
+    30  O30                     0.0000        0.0000        0.0000    
+
+ DIMENSIONLESS SCALED SENSITIVITIES (SCALED BY (PARAMETER_VALUE*(wt**.5))
+
+                   PARAMETER:  svd4          svd5          svd6        
+ OBS #  OBSERVATION ---------  ------------  ------------  ------------
+     1  O1                      0.0000        0.0000        0.0000    
+     2  O2                      0.0000        0.0000        0.0000    
+     3  O3                      0.0000        0.0000        0.0000    
+     4  O4                      0.0000        0.0000        0.0000    
+     5  O5                      0.0000        0.0000        0.0000    
+     6  O6                      0.0000        0.0000        0.0000    
+     7  O7                      0.0000        0.0000        0.0000    
+     8  O8                      0.0000        0.0000        0.0000    
+     9  O9                      0.0000        0.0000        0.0000    
+    10  O10                     0.0000        0.0000        0.0000    
+    11  O11                     0.0000        0.0000        0.0000    
+    12  O12                     0.0000        0.0000        0.0000    
+    13  O13                     0.0000        0.0000        0.0000    
+    14  O14                     0.0000        0.0000        0.0000    
+    15  O15                     0.0000        0.0000        0.0000    
+    16  O16                     0.0000        0.0000        0.0000    
+    17  O17                     0.0000        0.0000        0.0000    
+    18  O18                     0.0000        0.0000        0.0000    
+    19  O19                     0.0000        0.0000        0.0000    
+    20  O20                     0.0000        0.0000        0.0000    
+    21  O21                     0.0000        0.0000        0.0000    
+    22  O22                     0.0000        0.0000        0.0000    
+    23  O23                     0.0000        0.0000        0.0000    
+    24  O24                     0.0000        0.0000        0.0000    
+    25  O25                     0.0000        0.0000        0.0000    
+    26  O26                     0.0000        0.0000        0.0000    
+    27  O27                     0.0000        0.0000        0.0000    
+    28  O28                     0.0000        0.0000        0.0000    
+    29  O29                     0.0000        0.0000        0.0000    
+    30  O30                     0.0000        0.0000        0.0000    
+
+ COMPOSITE SCALED SENSITIVITIES ((SUM OF THE SQUARED DSS)/ND)**.5
+  DSS = DIMENSIONLESS SCALED SENSITIVITIES (SCALED BY (PARAMETER_VALUE*(wt**.5))
+  SENSITIVITIES ARE FIT-INDEPENDENT STATISTICS
+
+  PARAMETER    COMPOSITE SCALED SENSITIVITY    RATIO TO MAXIMUM
+  ----------   ----------------------------    ----------------
+  svd1                  0.00000E+00                     NaN
+  svd2                  0.00000E+00                     NaN
+  svd3                  0.00000E+00                     NaN
+  svd4                  0.00000E+00                     NaN
+  svd5                  0.00000E+00                     NaN
+  svd6                  0.00000E+00                     NaN
+
+ Singular vectors are listed in the _svd data-exchange file
+
+ STARTING VALUES OF REGRESSION PARAMETERS :
+
+ svd1         svd2         svd3         svd4         svd5         svd6        
+
+   1.0000E-03   1.0000E-03   1.0000E-03   1.0000E-03   1.0000E-03   1.0000E-03
+
+
+================================================================================
+================================================================================
+
+ UCODE Modified Gauss-Newton: SVD Assisted Parameter-Estimation Iteration#:    1
+ 
+ Error:  Error:  NONE OF THE PARAMETERS ARE CHANGING
+ 
+ 
+ CHECK THAT PROCESS MODEL IS EXECUTING FOR THIS ITERATION
+ 
+ 
+ CONFIRM THAT EXTRACTIONS ARE TAKEN FROM THE UPDATED OUTPUT
+ 
+ 
+ EVALUATE SENSITIVITIES
+ 
+ 
+ TERMINATING
+ 

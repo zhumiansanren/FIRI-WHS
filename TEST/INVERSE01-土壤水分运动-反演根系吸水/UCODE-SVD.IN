@@ -3,182 +3,83 @@ BEGIN OPTIONS KEYWORDS
 END OPTIONS
 
 BEGIN UCODE_CONTROL_DATA KEYWORDS
-  SENSITIVITIES = TRUE
-  OPTIMIZE = TRUE
-  SVD = YES
-  SVDRATIO = 1E-2
+  Sensitivities = True
+  Optimize      = True
+  SVD           = Yes
+  SVDRatio      = 0.0001
 END UCODE_CONTROL_DATA
 
-BEGIN Reg_GN_Controls Keywords
-  MaxIter       = 100
+BEGIN REG_GN_CONTROLS KEYWORDS
+  MaxIter       = 500
   TolPar        = 1E+10
   MaxChange     = 1E-5
   SVDPerturbAmt = 0.01
-  SVDMaxChange  = 2.0
-  SVDTolPar     = 0.01
-END Reg_GN_Controls
+  SVDMaxChange  = 1.0
+  SVDTolPar     = 0.0001
+END REG_GN_CONTROLS
 
-BEGIN MODEL_COMMAND_LINES
+BEGIN MODEL_COMMAND_LINES Keywords
   Command   = Run.bat
   Purpose   = Forward
   CommandId = UCODE-SVD
 END MODEL_COMMAND_LINES
 
-BEGIN Parameter_Groups TABLE
-  NRow = 2  NCol = 2  ColumnLabels
-  GroupName  PDFType
-  GP1        uniform
-  GP2        normal
-END Parameter_Groups
+BEGIN PARAMETER_GROUPS TABLE
+  NRow = 1  NCol = 5  ColumnLabels
+  GroupName  Adjustable  Transform  MaxChange  SenMethod
+  GP1        Yes         No         1.0        1
+END PARAMETER_GROUPS
 
-BEGIN MCMC_Parameter_DataPRIOR_PDF TABLE
-  NRow = 10  NCol = 6  ColumnLabels
-  ParamName GroupName  MCLowerConstraint  MCUpperConstraint  PDFVar1  PDFVar2
-  S1        GP1        0.0                0.006              0.0      0.006
-  S2        GP1        0.0                0.006              0.0      0.006
-  S3        GP1        0.0                0.006              0.0      0.006
-  S4        GP1        0.0                0.006              0.0      0.006
-  S5        GP1        0.0                0.006              0.0      0.006
-  S6        GP1        0.0                0.006              0.0      0.006
-END Parameter_Data
+BEGIN PARAMETER_DATA TABLE
+  NRow = 6  NCol = 5  ColumnLabels
+  ParamName  GroupName  StartValue  LowerValue  UpperValue
+  S1         GP1        0.001       0.0         0.1
+  S2         GP1        0.001       0.0         0.1
+  S3         GP1        0.001       0.0         0.1
+  S4         GP1        0.001       0.0         0.1
+  S5         GP1        0.001       0.0         0.1
+  S6         GP1        0.001       0.0         0.1
+END PARAMETER_DATA
 
-BEGIN OBSERVATION_GROUPS
-  GroupName  = moisture
-  PlotSymbol = 1
+BEGIN OBSERVATION_GROUPS TABLE
+  NRow = 1  NCol = 4  ColumnLabels
+  GroupName  Statistic  StatFlag  PlotSymbol
+  Moisture   0.1        SD        1
 END OBSERVATION_GROUPS
 
 BEGIN OBSERVATION_DATA TABLE
-  NRow = 60  NCol = 5  ColumnLabels
-  ObsName  ObsValue  Statistic  StatFlag  GroupName
-  O1       0.3834    0.1        SD        moisture
-  O2       0.3851    0.1        SD        moisture
-  O3       0.3867    0.1        SD        moisture
-  O4       0.3883    0.1        SD        moisture
-  O5       0.3900    0.1        SD        moisture
-  O6       0.3916    0.1        SD        moisture
-  O7       0.3932    0.1        SD        moisture
-  O8       0.3949    0.1        SD        moisture
-  O9       0.3965    0.1        SD        moisture
-  O10      0.3981    0.1        SD        moisture
-  O11      0.3998    0.1        SD        moisture
-  O12      0.4014    0.1        SD        moisture
-  O13      0.4030    0.1        SD        moisture
-  O14      0.4047    0.1        SD        moisture
-  O15      0.4063    0.1        SD        moisture
-  O16      0.4037    0.1        SD        moisture
-  O17      0.4011    0.1        SD        moisture
-  O18      0.3984    0.1        SD        moisture
-  O19      0.3958    0.1        SD        moisture
-  O20      0.3932    0.1        SD        moisture
-  O21      0.3906    0.1        SD        moisture
-  O22      0.3879    0.1        SD        moisture
-  O23      0.3853    0.1        SD        moisture
-  O24      0.3827    0.1        SD        moisture
-  O25      0.3801    0.1        SD        moisture
-  O26      0.3774    0.1        SD        moisture
-  O27      0.3748    0.1        SD        moisture
-  O28      0.3722    0.1        SD        moisture
-  O29      0.3696    0.1        SD        moisture
-  O30      0.3669    0.1        SD        moisture
-  O31      0.3643    0.1        SD        moisture
-  O32      0.3617    0.1        SD        moisture
-  O33      0.3591    0.1        SD        moisture
-  O34      0.3564    0.1        SD        moisture
-  O35      0.3538    0.1        SD        moisture
-  O36      0.3502    0.1        SD        moisture
-  O37      0.3466    0.1        SD        moisture
-  O38      0.3430    0.1        SD        moisture
-  O39      0.3394    0.1        SD        moisture
-  O40      0.3359    0.1        SD        moisture
-  O41      0.3323    0.1        SD        moisture
-  O42      0.3287    0.1        SD        moisture
-  O43      0.3251    0.1        SD        moisture
-  O44      0.3215    0.1        SD        moisture
-  O45      0.3179    0.1        SD        moisture
-  O46      0.3143    0.1        SD        moisture
-  O47      0.3107    0.1        SD        moisture
-  O48      0.3071    0.1        SD        moisture
-  O49      0.3035    0.1        SD        moisture
-  O50      0.3000    0.1        SD        moisture
-  O51      0.2964    0.1        SD        moisture
-  O52      0.2928    0.1        SD        moisture
-  O53      0.2892    0.1        SD        moisture
-  O54      0.2856    0.1        SD        moisture
-  O55      0.2820    0.1        SD        moisture
-  O56      0.2836    0.1        SD        moisture
-  O57      0.2852    0.1        SD        moisture
-  O58      0.2868    0.1        SD        moisture
-  O59      0.2885    0.1        SD        moisture
-  O60      0.2901    0.1        SD        moisture
-  O61      0.2917    0.1        SD        moisture
-  O62      0.2933    0.1        SD        moisture
-  O63      0.2949    0.1        SD        moisture
-  O64      0.2965    0.1        SD        moisture
-  O65      0.2981    0.1        SD        moisture
-  O66      0.2997    0.1        SD        moisture
-  O67      0.3014    0.1        SD        moisture
-  O68      0.3030    0.1        SD        moisture
-  O69      0.3046    0.1        SD        moisture
-  O70      0.3062    0.1        SD        moisture
-  O71      0.3078    0.1        SD        moisture
-  O72      0.3094    0.1        SD        moisture
-  O73      0.3110    0.1        SD        moisture
-  O74      0.3127    0.1        SD        moisture
-  O75      0.3143    0.1        SD        moisture
-  O76      0.3159    0.1        SD        moisture
-  O77      0.3175    0.1        SD        moisture
-  O78      0.3191    0.1        SD        moisture
-  O79      0.3207    0.1        SD        moisture
-  O80      0.3223    0.1        SD        moisture
-  O81      0.3239    0.1        SD        moisture
-  O82      0.3256    0.1        SD        moisture
-  O83      0.3272    0.1        SD        moisture
-  O84      0.3288    0.1        SD        moisture
-  O85      0.3304    0.1        SD        moisture
-  O86      0.3339    0.1        SD        moisture
-  O87      0.3374    0.1        SD        moisture
-  O88      0.3409    0.1        SD        moisture
-  O89      0.3444    0.1        SD        moisture
-  O90      0.3478    0.1        SD        moisture
-  O91      0.3513    0.1        SD        moisture
-  O92      0.3548    0.1        SD        moisture
-  O93      0.3583    0.1        SD        moisture
-  O94      0.3618    0.1        SD        moisture
-  O95      0.3653    0.1        SD        moisture
-  O96      0.3688    0.1        SD        moisture
-  O97      0.3723    0.1        SD        moisture
-  O98      0.3757    0.1        SD        moisture
-  O99      0.3792    0.1        SD        moisture
-  O100     0.3827    0.1        SD        moisture
-  O101     0.3862    0.1        SD        moisture
-  O102     0.3897    0.1        SD        moisture
-  O103     0.3932    0.1        SD        moisture
-  O104     0.3967    0.1        SD        moisture
-  O105     0.4002    0.1        SD        moisture
-  O106     0.4036    0.1        SD        moisture
-  O107     0.4071    0.1        SD        moisture
-  O108     0.4106    0.1        SD        moisture
-  O109     0.4141    0.1        SD        moisture
-  O110     0.4176    0.1        SD        moisture
-  O111     0.4162    0.1        SD        moisture
-  O112     0.4148    0.1        SD        moisture
-  O113     0.4135    0.1        SD        moisture
-  O114     0.4121    0.1        SD        moisture
-  O115     0.4107    0.1        SD        moisture
-  O116     0.4093    0.1        SD        moisture
-  O117     0.4079    0.1        SD        moisture
-  O118     0.4066    0.1        SD        moisture
-  O119     0.4052    0.1        SD        moisture
-  O120     0.4038    0.1        SD        moisture
-  O121     0.4024    0.1        SD        moisture
-  O122     0.4010    0.1        SD        moisture
-  O123     0.3997    0.1        SD        moisture
-  O124     0.3983    0.1        SD        moisture
-  O125     0.3969    0.1        SD        moisture
-  O126     0.3955    0.1        SD        moisture
-  O127     0.3941    0.1        SD        moisture
-  O128     0.3928    0.1        SD        moisture
-  O129     0.3914    0.1        SD        moisture
+  NRow = 30  NCol = 3  ColumnLabels
+  ObsName  ObsValue  GroupName
+  O1       0.3834    Moisture
+  O2       0.3851    Moisture
+  O3       0.3867    Moisture
+  O4       0.3883    Moisture
+  O5       0.3900    Moisture
+  O6       0.3916    Moisture
+  O7       0.3932    Moisture
+  O8       0.3949    Moisture
+  O9       0.3965    Moisture
+  O10      0.3981    Moisture
+  O11      0.3998    Moisture
+  O12      0.4014    Moisture
+  O13      0.4030    Moisture
+  O14      0.4047    Moisture
+  O15      0.4063    Moisture
+  O16      0.4037    Moisture
+  O17      0.4011    Moisture
+  O18      0.3984    Moisture
+  O19      0.3958    Moisture
+  O20      0.3932    Moisture
+  O21      0.3906    Moisture
+  O22      0.3879    Moisture
+  O23      0.3853    Moisture
+  O24      0.3827    Moisture
+  O25      0.3801    Moisture
+  O26      0.3774    Moisture
+  O27      0.3748    Moisture
+  O28      0.3722    Moisture
+  O29      0.3696    Moisture
+  O30      0.3669    Moisture
 END OBSERVATION_DATA TABLE
 
 BEGIN MODEL_INPUT_FILES
@@ -186,7 +87,7 @@ BEGIN MODEL_INPUT_FILES
 END MODEL_INPUT_FILES
 
 BEGIN MODEL_OUTPUT_FILES
-  ModOutFile      = LIST.OUT    InstructionFile = LIST.INS
+  ModOutFile      = OBS.OUT    InstructionFile = OBS.INS
   Category        = OBS
 END MODEL_OUTPUT_FILES
 
