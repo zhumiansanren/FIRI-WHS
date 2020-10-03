@@ -42,7 +42,7 @@ FIRI-WHS 文件结构
 
   -- DOC 目录，存在模型文档。
 
-  -- IVF 目录，存放 Visual Studio 2017 和 Intel Visual FORTRAN 2018 工程文件。
+  -- IVF 目录，存放 Visual Studio 2019 和 Intel Visual FORTRAN 2020 工程文件。
 
   -- REF 目录，存放参考文献。
 
