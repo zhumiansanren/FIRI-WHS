@@ -87,7 +87,7 @@ SUBROUTINE SWF_INF_FM
   INTEGER :: I, J
   REAL    :: HYCONPOND, HYCON1
   REAL    :: DELV1
-  REAL    :: QINFMAX              ! 当前时段地表最大允许入渗水量 (cm)
+  REAL    :: QINFMAX                   ! 当前时段地表最大允许入渗水量 (cm)
 
   I = 1
   J = IMAT(I)
