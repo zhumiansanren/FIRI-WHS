@@ -901,8 +901,6 @@ MODULE VAR
   !      = 2, 采用 Millington & Quirk 公式计算
   INTEGER :: ITOR
 
-
-
   ! 时段内的降雨量 (cm)
   REAL :: QRAIN
 
